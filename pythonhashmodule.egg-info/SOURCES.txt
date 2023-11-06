@@ -1,6 +1,0 @@
-hash.c
-setup.py
-pythonhashmodule.egg-info/PKG-INFO
-pythonhashmodule.egg-info/SOURCES.txt
-pythonhashmodule.egg-info/dependency_links.txt
-pythonhashmodule.egg-info/top_level.txt
