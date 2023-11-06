@@ -62,6 +62,10 @@ class User:
     @list_of_contacts.setter
     def list_of_contacts(self, user):
         self.__list_of_contacts.append(user)
+   
+    @list_of_contacts.deleter
+    def list_of_contacts(self):
+        del self.__list_of_contacts[-1]
     
     
 user_list = []
@@ -157,29 +161,29 @@ def print_contact(username):
                
 
 
-if __name__ == "__main__":
-   try:
-        user1 = User("dejan", "11111")
-        user2 = User("pero", "111211")
-        user3 = User("slavko", "11111")
+# if __name__ == "__main__":
+#    try:
+#         user1 = User("dejan", "11111")
+#         user2 = User("pero", "111211")
+#         user3 = User("slavko", "11111")
 
-        register_user(user1.username, user1.password)
-        register_user(user2.username, user2.password)
-        register_user(user3.username, user3.password)
+#         register_user(user1.username, user1.password)
+#         register_user(user2.username, user2.password)
+#         register_user(user3.username, user3.password)
 
-        # for user in user_list:
-        #     print(user)
+#         # for user in user_list:
+#         #     print(user)
 
-        login(user1.username, user1.password)
-        add_new_contact(user1.username, user3.username)
-        add_new_contact(user1.username, user2.username)
+#         login(user1.username, user1.password)
+#         add_new_contact(user1.username, user3.username)
+#         add_new_contact(user1.username, user2.username)
 
-        # delete_contact(user1.username, user2.username)
+#         delete_contact(user1.username, user2.username)
 
-        print_contact(user1.username,)
+#         print_contact(user1.username,)
 
-        print("eeeeeeeeeeeee")
+#         # print("eeeeeeeeeeeee")
 
 
-   except Exception as e:
-       print(e)
+#    except Exception as e:
+#        print(e)
