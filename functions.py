@@ -109,7 +109,6 @@ def is_user_logged_in(username):
     for user in logged_users:
         if user == username:
             return True
-    # print(f"You {username} not logged in.")
     return False
 
 
@@ -160,62 +159,27 @@ def print_contact(username):
 
 if __name__ == "__main__":
    try:
-        # user1 = User("dejan", "11111")
-        # user2 = User("pero", "11111")
-        # user3 = User("slavko", "11111")
+        user1 = User("dejan", "11111")
+        user2 = User("pero", "111211")
+        user3 = User("slavko", "11111")
 
-        # register_user(user1.username, user1.password)
-        # register_user(user2.username, user2.password)
-        # register_user(user3.username, user3.password)
+        register_user(user1.username, user1.password)
+        register_user(user2.username, user2.password)
+        register_user(user3.username, user3.password)
 
         # for user in user_list:
         #     print(user)
 
-        # login(user1.username, user.password)
-        # add_new_contact(user1.username, user2.username)
-        # add_new_contact(user1.username, user3.username)
+        login(user1.username, user1.password)
+        add_new_contact(user1.username, user3.username)
+        add_new_contact(user1.username, user2.username)
 
-        # get_user(user1.username).delete("slavko")
-        # print("eeeeeeeeeeeee")
+        # delete_contact(user1.username, user2.username)
 
+        print_contact(user1.username,)
 
+        print("eeeeeeeeeeeee")
 
-        
-
-        # print_contact(get_user(user1))
-        password = "myPassword"
-
-        hashed_password = pythonhashmodule.hash_password(password)
-
-        print(password)
-
-        print(hashed_password)
-
-        print(hashed_password[4])
-
-        # print(pythonhashmodule.check_password(password, hashed_password))
-        # hashed_password = pythonhashmodule.hash_password(password) 
-
-        # temp  = pythonhashmodule.hash_password(password) 
-        # print(temp)
-
-        # print(pythonhashmodule.hash_password(hashed_password))
-        # password2 = "myPassword"
-        # temp = pythonhashmodule.check_password(password2, hashed_password)
-        # print(temp) 
-
-        # password = "oko"
-        # hashed_password = pythonhashmodule.hash_password(password)
-        # print("Hashed password:", hashed_password)
-
-        # is_matched = pythonhashmodule.check_password(hashed_password, password)
-
-        # print(pythonhashmodule.hash_password(hashed_password))
-        # print(is_matched)
-        # if is_matched:
-        #     print("Password matched!")
-        # else:
-        #     print("Password not matched!")
 
    except Exception as e:
        print(e)

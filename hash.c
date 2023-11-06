@@ -17,21 +17,13 @@ char* hash_password(const char* password) {
         hashed_password[i] = result_char;
     }
 
-    // for (size_t i = 0; i < length_of_password; i++) {
-    //     char key_char = key[i % length_of_key];
-    //     char result_char = hashed_password[i] ^ key_char;
-    //     hashed_password[i] = result_char;
-    // }
-
     hashed_password[length_of_password] = '\0';
-
     return hashed_password;
 }
 
 int check_password(const char* hash, const char* password) {
-    char* calculated_hash = hash_password(hash);
-    printf("calculated hash: %s\n", calculated_hash);
-    
+    char* calculated_hash = hash_password(password);
+
     int is_matched = strcmp(hash, calculated_hash) == 0;
 
     free(calculated_hash);
